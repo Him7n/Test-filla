@@ -1,0 +1,51 @@
+{
+  "compilerOptions": {
+    "types": [
+      "bun-types", // add Bun type definitions
+      "./types.d.ts", // add your own type definitions
+      "@types/chrome",
+      "@types/firefox-webext-browser"
+    ],
+    "baseUrl": "src",
+    "paths": {
+      "@docFillerCore/*": ["docFillerCore/*"],
+      "@types/*": ["types/*"],
+      "@utils/*": ["utils/*"]
+    },
+
+    // enable latest features
+    "lib": ["esnext"],
+    "module": "esnext",
+    "target": "esnext",
+
+    // if TS 5.x+
+    "moduleResolution": "bundler",
+    "noEmit": true,
+    "allowImportingTsExtensions": true,
+    "moduleDetection": "force",
+
+    "jsx": "react-jsx", // support JSX
+    "allowJs": true, // allow importing `.js` from `.ts`
+    "esModuleInterop": true, // allow default imports for CommonJS modules
+
+    // best practices
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
+    "noFallthroughCasesInSwitch": true,
+
+    // Some stricter flags (disabled by default)
+    "noUnusedLocals": false,
+    "noUnusedParameters": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "allowUnusedLabels": true,
+    "allowUnreachableCode": false,
+    "exactOptionalPropertyTypes": true,
+    "noImplicitOverride": true,
+    "noImplicitReturns": true,
+    "noUncheckedIndexedAccess": true,
+
+    "isolatedModules": true
+    // "checkJs": true,
+  }
+}
